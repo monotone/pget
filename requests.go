@@ -70,10 +70,10 @@ func (p *Pget) CheckMirrors(ctx context.Context, url string, ch *Ch) {
 		return
 	}
 
-	if res.Header.Get("Accept-Ranges") != "bytes" {
-		ch.Err <- errors.Errorf("not supported range access: %s", url)
-		return
-	}
+	// if res.Header.Get("Accept-Ranges") != "bytes" {
+	// 	ch.Err <- errors.Errorf("not supported range access: %s", url)
+	// 	return
+	// }
 
 	// To perform with the correct "range access"
 	// get the last url in the redirect
